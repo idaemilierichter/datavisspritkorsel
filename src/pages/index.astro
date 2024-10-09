@@ -3,13 +3,49 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import diagram from "../assets/images/diagram1.svg";
+import kort from "../assets/images/dataviskort.svg";
+import hero from "../assets/images/spirituskoersel-unge.webp";
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
+	
+	<article class="max-w-3xl mx-auto my-20">
+		<section>
+			<h1 class="text-6xl mb-10 font-bold">Spirituskørsel i Danmark: Hvor Er Problemet Størst?</h1>
+			<Image class="mb-10" src={hero} alt=""></Image>
+		</section>
+		
+		<section>
+			<p>Spirituskørsel er et alvorligt problem i Danmark, og dataene for 2022 viser tydelige tendenser i både regionale forskelle og kønsforskelle blandt ofrene. </p>
+			<br><p>Af de i alt 308 tilskadekomne og dræbte i spiritusuheld er langt størstedelen mænd, og Region Midtjylland topper listen over de mest ramte regioner. </p>
+			<br><p>Denne artikel dykker ned i statistikkerne for at forstå, hvor og blandt hvem uheldene sker, og hvad der kan gøres for at mindske antallet af fremtidige uheld.</p>
+		</section>
+
+		<section class="mt-32">
+			<h2 class="text-3xl mb-8">Regionale forskelle i spiritusuheld</h2>
+			<p>På trods af at spirituskørsel er et problem over hele landet, er der store regionale forskelle i antallet af tilskadekomne og dræbte.</p>
+			<br><p>Region Midtjylland står for det højeste antal med 71 rapporterede ofre, efterfulgt af Region Nordjylland og Region Syddanmark. Omvendt har Bornholm ingen rapporterede uheld i 2022.
+			</p>
+			<br><p>Denne forskel kan skyldes en række faktorer såsom trafikmønstre, befolkningsstørrelse og forebyggende tiltag. Kortet herunder giver et visuelt overblik over, hvor uheldene sker.</p>
+			<Image class="mt-10" src={kort} alt=""></Image>
+		</section>
+
+		<section class="mt-32">
+			<h2 class="text-3xl mb-8">Mænd dominerer statistikken</h2>
+			<p>Et markant mønster i dataene er, at mænd i langt højere grad end kvinder er involveret i spiritusuheld.</p>
+		<br><p>På landsplan er 239 mænd enten blevet dræbt eller kommet til skade, mens kun 69 kvinder er registreret.</p>
+	<br><p>Dette forhold kan indikere adfærdsmæssige forskelle mellem kønnene, når det kommer til risikovillighed bag rattet under påvirkning. Søjlediagrammet nedenfor illustrerer denne tydelige kønsforskel på tværs af regionerne.</p>	
+	<Image class="mt-10" src={diagram} alt=""></Image>
+	</section>
+	
+
+		
+
 	</article>
 </MainLayout>
+
+<style>
+	h1, h2{
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	}
+</style>
